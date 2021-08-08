@@ -1,0 +1,6 @@
+<mybatis>
+    <dataSource>druid</dataSource>
+    <mapper>UserMapper.xml</mapper>
+<!--    <mapper></mapper>-->
+
+</mybatis>

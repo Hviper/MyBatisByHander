@@ -1,0 +1,11 @@
+<mapper namespace="dao.UserDao">
+<!--    namespace命名空间，为了区分同一个mapper标签的不同对象-->
+<!--    insert为type，代理中的method方法可以获得getName()，然后做对比-->
+<!--    该id作用是区分同一个insert中的不同方法，比如insertAll，insertOne等等-->
+    <insert id="saveUser" resultType="java.lang.Integer" paramType="entity.User">
+        insert into user values(?,?,?,?);
+    </insert>
+    <select id="SelectOneUser" resultType="entity.User" paramType="java.lang.Integer">
+        select * from user where id=?;
+    </select>
+</mapper>
